@@ -1,0 +1,12 @@
+.main
+{
+    margin: 40px 80px 0px 80px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    color: #121212
+}
+
+td
+{
+padding: 10px 40px 10px 40px;
+}
