@@ -1,0 +1,131 @@
+
+{% extends "base/base.html" %}
+
+
+{% block body %}
+
+<div class="filler"></div>
+
+<div class="main">
+    <div class="main-title">Projects</div>
+</div>
+
+<div class="filler"></div>
+
+<div class="main">
+
+    <table class="centered-table">
+        <tr>
+            <td class="lefttd"><img src="https://lh3.ggpht.com/oMt88jr4E5lYukJKJwBej7fNLS18bhjRadsMDg2AAtjFG9d_Uqcs5WSgKcDOvnzA1Q=w300" width="100px"></td>
+
+            <td class="lefttd project-title">HackIllinois App</td>
+
+            <td class="righttd">
+                <a class="btn" href="#">View details &raquo;</a>
+            </td>
+ 
+        </tr>
+    </table>
+
+    <div id="details-hackillinois" class="collapse project-description">
+        <p>HackIllinois is a student run hackathon at the University of Illinois.
+            As a member of the core Systems Team, I collaboratively developed the Android app and contibuted to the backend of the main website.</p>
+    </div>
+
+    <div class="row">
+    <div class="span4 collapse-group">
+        <p class="collapse">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    </div>
+</div>
+
+</div>
+
+
+<div class="filler"></div>
+
+<div class="main">
+
+    <table class="centered-table">
+        <tr>
+            <td class="lefttd"><img src="https://lh3.ggpht.com/B8RPPsU0iVxyHX3bioY2CPFFqxpR_Nmy_jiU_dxH3q19m7wmS2O8qcln_uYtqYtyjA=w300" width="100px"></td>
+
+            <td class="lefttd project-title">Engineering Open House App</td>
+
+            <td class="righttd">
+                <a class="btn collapse-data-btn" data-toggle="collapse" href="#details-eoh"><span class="glyphicon glyphicon-circle-arrow-down"></span></a>
+            </td>
+ 
+        </tr>
+    </table>
+
+    <div id="details-eoh" class="collapse project-description">
+        <p>Engineering Open House (EOH) is an annual student event that welcomes over 15,000 visitors from around the world to explore student engineering projects.</p>
+        <p>This year I threw out the old mobile app and designed a new app from scratch. I developed the Android app myself and collaborated with another iOS developer to produce a uniform design and user experience.</p>
+    </div>
+
+</div>
+
+
+
+
+<div class="filler"></div>
+
+<div class="main">
+
+    <table class="centered-table">
+        <tr>
+            <td class="lefttd"><img src="https://lh4.ggpht.com/h2fKjZA1UHQUOf17FIbHCjo5wYMf_Gp7BQCXambgUo0aRuazxfcG_htoSh6dxyz3Yws=w300" width="100px"></td>
+
+            <td class="lefttd project-title">EWS Labs App</td>
+
+            <td class="righttd">
+                <a class="btn collapse-data-btn" data-toggle="collapse" href="#details-ews"><span class="glyphicon glyphicon-circle-arrow-down"></span></a>
+            </td>
+ 
+        </tr>
+    </table>
+
+    <div id="details-ews" class="collapse project-description">
+        <p>As MP deadlines approach, University computer labs often fill to capacity as students scramble to debug and submit their code. In order to mitigate this problem, I created an Android app that allows users to monitor the availability of computers in every lab on campus.</p>
+    </div>
+
+</div>
+
+
+
+<div class="filler"></div>
+
+<div class="main">
+
+    <table class="centered-table">
+        <tr>
+            <td class="lefttd"><img src="https://lh5.ggpht.com/H5-duO74Ct2h5Lt1mzbN6QZKLTmLeMFG1hmxqsR5MQN4MrnnjWqmW675-pKvfRGCyA=w300" width="100px"></td>
+
+            <td class="lefttd project-title">Plumbing Paradox</td>
+
+            <td class="righttd">
+                <a class="btn collapse-data-btn" data-toggle="collapse" href="#details-plumbing"><span class="glyphicon glyphicon-circle-arrow-down"></span></a>
+            </td>
+ 
+        </tr>
+    </table>
+
+    <div id="details-plumbing" class="collapse project-description">
+        <p>Plumbing Paradox was my first venture into computer programming. It is a 2D puzzle game on Android that uses the libGDX game library.</p>
+    </div>
+
+</div>
+
+<div class="filler"></div>
+
+<script>
+$('.btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $collapse = $this.closest('.collapse-group').find('.collapse');
+    $collapse.collapse('toggle');
+});
+</script>
+
+
+{% endblock body %}
