@@ -1,24 +1,49 @@
 {% extends "base/base.html" %}
 
 
-{% block head %}
-    <link rel="stylesheet" type="text/css" href="/css/mainpage.css">
-{% endblock head %}
-
-
 {% block body %}
 
-<div class="main">
-    <p>
+<div class="filler"></div>
 
-    <table>
-        <tr><td>University of Illinois, Urbana-Champaign</td></tr>
-        <tr><td>B.S. Computer Science</td><td>Expected May 2016</td></tr>
-        <tr><td>Hoeft Technology & Management Minor</td></tr>
-        <tr><td>M.C.S Computer Science</td><td>Expected May 2016</td></tr>
-        <tr><td>Facebook, Software Engineering Intern</td><td>Summer 2016</td></tr>
-        <tr><td>Other stuff</td></tr>
-    </p>
+<div class="main">
+
+    <div class="main-title">Resume</div>
+
+    <table class="centered-table">
+        <tr><td class="resume-header">Education</td></tr>
+        <tr>
+            <td class="lefttd">University of Illinois, Urbana-Champaign</td>
+            <td class="righttd">GPA: 4.00/4.00</td>
+        </tr>
+        <tr>
+            <td class="lefttd">M.C.S Computer Science</td>
+            <td class="righttd">May 2016</td>
+        </tr>
+        <tr>
+            <td class="lefttd">B.S. Computer Science</td>
+            <td class="righttd">May 2016</td>
+        </tr>
+        <tr>
+            <td class="lefttd">Hoeft Technology &amp; Management Minor</td>
+            <td class="righttd">May 2016</td>
+        </tr>
+
+
+        <tr><td class="resume-header">Experience</td></tr>
+        <tr>
+            <td class="lefttd">Facebook, Software Engineering Intern</td>
+            <td class="righttd">Summer 2016</td>
+        </tr>
+        <tr>
+            <td class="lefttd">Engineering Open House, Director of Technology</td>
+            <td class="righttd">March 2013-Present</td>
+        </tr>
+        <tr>
+            <td class="lefttd">HackIllinois, Systems Team</td>
+            <td class="righttd">October 2013-Present</td>
+        </tr>
+    </table>
+
 </div>
 
 {% endblock body %}

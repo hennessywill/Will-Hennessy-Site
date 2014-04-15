@@ -3,18 +3,24 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-
         <meta name="author" content="Will Hennessy">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Will Hennessy -- an aspiring Software Engineer studying Computer Science at the University of Illinois">
 
         <title>Will Hennessy</title>
 
-        <link rel="stylesheet" type="text/css" href="/css/topbar.css">
- 
-        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lato:700'>
-  
-        <link rel="icon" type="image/ico" href="/favicon.ico"/>
+        <!-- Bootstrap CSS file -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Bootstrap JS file -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
+        <!-- Include my custom styles to override bootstrap components -->
+        <link rel="stylesheet" type="text/css" href="/css/will_styles.css">
+  
+        <!-- Facebook Open Graph meta data -->
         <meta property="og:title" content="Will Hennessy"/>
         <meta property="og:url" content="http://www.willhennessy.com"/>
         <meta property="og:type" content="website"/>
@@ -26,16 +32,35 @@
 
     </head>
 
-    <body>
-        <div class="topbar">
-            <h1>Will Hennessy</h1>
-            <div class="menubar">
-                <div class="menuoption"> <a href="/">Home</a> </div>
-                <div class="menuoption"> <a href="/aboutme">About me</a> </div>
-                <div class="menuoption"> <a href="/resume">Resume</a> </div>
-                <div class="menuoption"> <a href="/projects">Projects</a> </div>
-            </div>
-        </div>
+    <body> 
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+              <ul class="nav navbar-nav">
+                <li id="index"><a href="/">Home</a></li>
+                <li id="aboutme"><a href="/aboutme">About Me</a></li>
+                <li id="resume"><a href="/resume">Resume</a></li>
+                <li id="projects"><a href="/projects">Projects</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+        <section class="backdrop"></section>
+
+        <script>
+            // set the current nav bar as class="active"
+            var pathArray = window.location.pathname.split( '/' );
+            var selected = pathArray[1];
+            if(selected.length > 0) {
+                $("#"+selected).addClass('active');
+            }
+            else {
+                $("#index").addClass('active');
+                $(".backdrop").append('<div class="bg-img"></div>');
+            }
+        </script>
 
        {% block body %}{% endblock %}
        

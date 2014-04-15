@@ -6,7 +6,6 @@ from AboutMeHandler import AboutMeHandler
 from ResumeHandler import ResumeHandler
 from ProjectsHandler import ProjectsHandler
 
-
 """ A mapping of all the site URL's to the Python page handlers """
 
 handlers = [

@@ -1,15 +1,29 @@
 {% extends "base/base.html" %}
 
 
-{% block head %}
-    <link rel="stylesheet" type="text/css" href="/css/mainpage.css">
-{% endblock head %}
-
-
 {% block body %}
 
-<div class="main">
-    Hello everyone, my name is Will!
+<!-- Note: base.html dynamically adds the image background on this page -->
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-1 home-name">
+        Will Hennessy.
+        <div class="home-sub">
+            Student &amp; Aspiring Software Engineer
+        </div>
+
+        <table class="home-contact">
+            <tr>
+                <td><span class="glyphicon glyphicon-envelope"></span></td>
+                <td><a href="mailto:hennessywill@gmail.com">hennessywill@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td><span class="glyphicon glyphicon-file"></span></td>
+                <td><a href="https://github.com/hennessywill" target="_blank">Github</a></td>
+            </tr>
+        </table>
+    </div>
 </div>
+
 
 {% endblock body %}
