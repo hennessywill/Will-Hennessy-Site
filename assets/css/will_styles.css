@@ -22,12 +22,6 @@ a:active, a:visited
 }
 
 
-td
-{
-    padding: 0px 0px 12px 20px;
-}
-
-
 
 .main
 {
@@ -119,6 +113,7 @@ td
 {
     width: 80%;
     margin: 0px auto;
+    table-layout: fixed;
 }
 
 
@@ -145,7 +140,34 @@ td
 }
 
 
+.btn
+{
+    font-size: 26px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: hsla(221, 85%, 35%, 0.86);
+}
+
+
+.project-title
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    color: hsla(221, 85%, 35%, 0.86);
+}
+
+
+.project-description
+{
+    padding: 20px 60px 0px 60px;
+    font-size: 22px;
+}
+
+
 /* Blue
 hsla(221, 85%, 35%, 0.86)
 rgba(5,60,223,0.83)
 */
+
