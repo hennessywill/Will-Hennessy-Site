@@ -5,6 +5,7 @@ from IndexHandler import IndexHandler
 from AboutMeHandler import AboutMeHandler
 from ResumeHandler import ResumeHandler
 from ProjectsHandler import ProjectsHandler
+from FacebookHandler import FacebookHandler
 
 """ A mapping of all the site URL's to the Python page handlers """
 
@@ -13,6 +14,7 @@ handlers = [
     RedirectRoute('/aboutme', handler=AboutMeHandler, name='AboutMe', strict_slash=True),
     RedirectRoute('/resume', handler=ResumeHandler, name='Resume', strict_slash=True),
     RedirectRoute('/projects', handler=ProjectsHandler, name='Project', strict_slash=True),
+    RedirectRoute('/facebook', handler=FacebookHandler, name='Facebook', strict_slash=True),
 
 
     RedirectRoute('/401', handler=Error401Handler, name='Error401', strict_slash=True),
