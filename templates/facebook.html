@@ -53,8 +53,10 @@
     /** Login to facebook **/
     FB.login(function(response) { }, {scope: 'user_photos'});
 
+    var fb_access_token = "CAACEdEose0cBALxKHnG1mq9sXghq5TsRxR49PTIUUTPZAdArUYKt8jBXoW6V0vv8Phy42hauoejRF3Pev7U8rxle6evdZCCup25hQudNgr5IJnLCaZA9x1LoVfACb72qlZAYwBay2SWW5CMQj3GU0OxxD7HBicKaEUOitAxU9aRC7XmZAvueFnPG2G5xNHZAWwqhUKvGNHwAZDZD"
+
     /** Load all of my profile pictures **/
-    FB.api("/me/albums?access_token=CAACEdEose0cBALxKHnG1mq9sXghq5TsRxR49PTIUUTPZAdArUYKt8jBXoW6V0vv8Phy42hauoejRF3Pev7U8rxle6evdZCCup25hQudNgr5IJnLCaZA9x1LoVfACb72qlZAYwBay2SWW5CMQj3GU0OxxD7HBicKaEUOitAxU9aRC7XmZAvueFnPG2G5xNHZAWwqhUKvGNHwAZDZD",
+    FB.api("/me/albums?access_token=" + fb_access_token,
       function (response) {
         for (album in response.data)
         {
@@ -62,7 +64,7 @@
           if (response.data[album].name == "Profile Pictures")
           {
             // Get a list of all photos in that album.
-            FB.api(response.data[album].id + "/photos?access_token=CAACEdEose0cBALxKHnG1mq9sXghq5TsRxR49PTIUUTPZAdArUYKt8jBXoW6V0vv8Phy42hauoejRF3Pev7U8rxle6evdZCCup25hQudNgr5IJnLCaZA9x1LoVfACb72qlZAYwBay2SWW5CMQj3GU0OxxD7HBicKaEUOitAxU9aRC7XmZAvueFnPG2G5xNHZAWwqhUKvGNHwAZDZD", function(response) {
+            FB.api(response.data[album].id + "/photos?access_token="+fb_access_token, function(response) {
 
               for (var i=0; i < response.data.length; i++) {
                 src = response.data[i].images[0].source; // the image link
@@ -79,7 +81,7 @@
 
   /** Load the most recent posts from will hennessy site facebook page **/
   FB.api(
-    "/willhennessysite/feed?access_token=CAACEdEose0cBALxKHnG1mq9sXghq5TsRxR49PTIUUTPZAdArUYKt8jBXoW6V0vv8Phy42hauoejRF3Pev7U8rxle6evdZCCup25hQudNgr5IJnLCaZA9x1LoVfACb72qlZAYwBay2SWW5CMQj3GU0OxxD7HBicKaEUOitAxU9aRC7XmZAvueFnPG2G5xNHZAWwqhUKvGNHwAZDZD",
+    "/willhennessysite/feed?access_token="+fb_access_token,
     function (response) {
       if (response && !response.error) {
         for(var i=0; i<response.data.length; i++) {
