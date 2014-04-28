@@ -90,6 +90,19 @@ d3.gantt = function() {
 
 
 
+    /* --- start my code --- */
+
+    var tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-8, 0])
+      .html(function(d) {
+        return '<p class="course-description"><b>' + d.name + "</b></p>"
+            + '<p class="course-description">' + d.description + "</p>";
+      })
+
+    svg.call(tip);
+
+
     /** Create the scaled vector graphic (svg) and bind the list data to the DOM **/
     var chart =  svg.selectAll(".chart")
      .data(tasks).enter();
@@ -106,10 +119,9 @@ d3.gantt = function() {
      .attr("y", 0)
      .attr("transform", rectTransform)
      .attr("height", function(d) { return y.rangeBand(); })
-     .attr("width", function(d) { 
-        console.log("making a rect");
-         return (x(d.endDate) - x(d.startDate)); 
-         });
+     .attr("width", function(d) { return (x(d.endDate) - x(d.startDate)); } )
+     .on('mouseover', tip.show)
+     .on('mouseout', tip.hide);
 
 
      /** Add a centered text label to every rectangle **/
@@ -125,9 +137,11 @@ d3.gantt = function() {
         return middleY;
       })
      .attr("text-anchor", "middle")
-     .text( function(d) { console.log("adding "+d.label); return d.label; });
+     .text( function(d) { return d.label; });
 
-     
+    /* --- end my code --- */     
+
+
 
 
      svg.append("g")
