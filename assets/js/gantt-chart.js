@@ -89,8 +89,7 @@ d3.gantt = function() {
     
 
 
-
-    /* --- start my code --- */
+    /* ----- start my code ----- */
 
     var tip = d3.tip()
       .attr('class', 'd3-tip')
@@ -139,7 +138,7 @@ d3.gantt = function() {
      .attr("text-anchor", "middle")
      .text( function(d) { return d.label; });
 
-    /* --- end my code --- */     
+    /* ----- end my code ----- */     
 
 
 
@@ -150,7 +149,7 @@ d3.gantt = function() {
      .transition()
      .call(xAxis);
      
-     svg.append("g").attr("class", "y axis").transition().call(yAxis);
+     //svg.append("g").attr("class", "y axis").transition().call(yAxis);
      
      return gantt;
     };

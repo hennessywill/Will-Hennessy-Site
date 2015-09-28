@@ -12,7 +12,7 @@ window.fbAsyncInit = function() {
   /** Login to facebook **/
   FB.login(function(response) { }, {scope: 'user_photos'});
 
-  var fb_access_token = "CAACEdEose0cBANIrDUVExwFMKuwMsUa3YPXUTatPxFZAMkjuYZBNf9U6KeU5ny6kGXpQ49pN37BxxRdVLlticzrlEBZAU4rREio7LA6PVb8iFKGXZCFD5dlaMSteMov7JAV5mT0LlMhnPTccAU5ZBMUZAlkehEDAZBU0P0bE7rSYFK9rsg5aJP0oxS6QbxAr4uqqNZCBC76FUAZDZD"
+  var fb_access_token = "CAAIrXU0bdBQBADZAVM1jQxGB9oVCk9EAAsaUL5ZA7KJELwICCsNZBsFAoZCJJaHjlqvoLcvT9QZBawcoEaxPppZBbtV8hFrPZBrlHsfSxX8iN9BrWoWfJzyqSHz1kZCAAnkLXGiZBI8XZCjVde4WcaaZCIZCply31qUGrZApU3SevufOMGY1ad8GXZAjeNRWso45spji21n4r6ycoX2wZDZD"
 
   /** Load all of my profile pictures **/
   FB.api("/me/albums?access_token=" + fb_access_token,
