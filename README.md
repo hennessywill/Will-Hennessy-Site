@@ -1,3 +1,6 @@
+NOTE: this is an old first attempt at web design. I am working on a redesign in hennessywill/hennessywill.github.io
+
+
 Will Hennessy
 
 Final Project Plan
